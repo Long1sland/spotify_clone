@@ -17,40 +17,48 @@ const Player = () => {
 
   const [trackData, setTrackData] = useState([
     {
-      song: "../music/Angel_In_Your_Eyes.mp3",
-      image: "./TrackImages/Generic.png",
+      song: "../player/music/Angel_In_Your_Eyes.mp3",
+      image: "./player/TrackImages/Generic.png",
       id: 1,
     },
-    { song: "../music/Audio.mp3", image: "./TrackImages/audio.jpg", id: 2 },
-    { song: "../music/Genius.mp3", image: "./TrackImages/Genius.jpg", id: 3 },
     {
-      song: "../music/Heaven_Can_Wait.mp3",
-      image: "./TrackImages/Heaven_Can_Wait.jpg",
+      song: "../player/music/Audio.mp3",
+      image: "./player/TrackImages/audio.jpg",
+      id: 2,
+    },
+    {
+      song: "../player/music/Genius.mp3",
+      image: "./player/TrackImages/Genius.jpg",
+      id: 3,
+    },
+    {
+      song: "../player/music/Heaven_Can_Wait.mp3",
+      image: "./player/TrackImages/Heaven_Can_Wait.jpg",
       id: 4,
     },
     {
-      song: "../music/Its_Time.mp3",
-      image: "./TrackImages/Generic.png",
+      song: "../player/music/Its_Time.mp3",
+      image: "./player/TrackImages/Generic.png",
       id: 5,
     },
     {
-      song: "../music/Mountains.mp3",
+      song: "../player/music/Mountains.mp3",
       image: "./TrackImages/Mountains.jpg",
       id: 6,
     },
     {
       song: "../music/No_New_Friends.mp3",
-      image: "./TrackImages/No_New_Friends.png",
+      image: "./player/TrackImages/No_New_Friends.png",
       id: 7,
     },
     {
-      song: "../music/Thunderclouds.mp3",
-      image: "./TrackImages/Thunderclouds.jpg",
+      song: "../player/music/Thunderclouds.mp3",
+      image: "./player/TrackImages/Thunderclouds.jpg",
       id: 8,
     },
     {
-      song: "../music/Welcome_To_The_Wonderful_World.mp3",
-      image: "./TrackImages/Generic.png",
+      song: "../player/music/Welcome_To_The_Wonderful_World.mp3",
+      image: "./player/TrackImages/Generic.png",
       id: 9,
     },
   ]);
@@ -107,7 +115,7 @@ const Player = () => {
       <MediaButtons>
         <img
           alt="prev"
-          src="./skip-track.png"
+          src="./player/skip-track.png"
           id="prev_track"
           onClick={() => {
             if (currentTrack === 0) {
@@ -121,7 +129,7 @@ const Player = () => {
         {!isPlaying && (
           <img
             alt="play/pause"
-            src="./play-button.png"
+            src="./player/play-button.png"
             id="play"
             onClick={() => {
               setIsPlaying((prev) => !prev);
@@ -132,7 +140,7 @@ const Player = () => {
         {isPlaying && (
           <img
             alt="play/pause"
-            src="./pause.png"
+            src="./player/pause.png"
             id="pause"
             onClick={() => {
               setIsPlaying((prev) => !prev);
@@ -143,7 +151,7 @@ const Player = () => {
         <img
           alt="next"
           id="next_track"
-          src="./skip-track.png"
+          src="./player/skip-track.png"
           onClick={() => {
             if (currentTrack === trackData.length - 1) {
               setCurrentTrack(0);
